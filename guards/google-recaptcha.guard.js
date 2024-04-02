@@ -37,7 +37,8 @@ let GoogleRecaptchaGuard = class GoogleRecaptchaGuard {
             return true;
         }
         const options = this.reflector.get(provider_declarations_1.RECAPTCHA_VALIDATION_OPTIONS, context.getHandler());
-        const response = (options === null || options === void 0 ? void 0 : options.response) ? await (options === null || options === void 0 ? void 0 : options.response(request))
+        const response = (options === null || options === void 0 ? void 0 : options.response)
+            ? await (options === null || options === void 0 ? void 0 : options.response(request))
             : await this.options.response(request);
         const score = (options === null || options === void 0 ? void 0 : options.score) || this.options.score;
         const action = options === null || options === void 0 ? void 0 : options.action;
@@ -49,8 +50,8 @@ let GoogleRecaptchaGuard = class GoogleRecaptchaGuard {
     }
 };
 GoogleRecaptchaGuard = __decorate([
-    common_1.Injectable(),
-    __param(3, common_1.Inject(provider_declarations_1.RECAPTCHA_OPTIONS)),
+    (0, common_1.Injectable)(),
+    __param(3, (0, common_1.Inject)(provider_declarations_1.RECAPTCHA_OPTIONS)),
     __metadata("design:paramtypes", [google_recaptcha_validator_1.GoogleRecaptchaValidator,
         core_1.Reflector,
         recaptcha_request_resolver_1.RecaptchaRequestResolver, Object])

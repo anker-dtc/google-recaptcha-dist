@@ -96,10 +96,10 @@ class GoogleRecaptchaModule {
     }
     static resolveHttpModule() {
         try {
-            return load_module_1.loadModule('@nestjs/axios');
+            return (0, load_module_1.loadModule)('@nestjs/axios');
         }
         catch (e) {
-            return load_module_1.loadModule('@nestjs/common');
+            return (0, load_module_1.loadModule)('@nestjs/common');
         }
     }
     static transformAxiosConfig(axiosConfig) {

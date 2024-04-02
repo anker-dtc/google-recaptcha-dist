@@ -106,9 +106,9 @@ let GoogleRecaptchaValidator = class GoogleRecaptchaValidator {
     }
 };
 GoogleRecaptchaValidator = __decorate([
-    common_1.Injectable(),
-    __param(0, common_1.Inject(provider_declarations_1.RECAPTCHA_HTTP_SERVICE)),
-    __param(1, common_1.Inject(provider_declarations_1.RECAPTCHA_OPTIONS)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, common_1.Inject)(provider_declarations_1.RECAPTCHA_HTTP_SERVICE)),
+    __param(1, (0, common_1.Inject)(provider_declarations_1.RECAPTCHA_OPTIONS)),
     __metadata("design:paramtypes", [common_1.HttpService, Object])
 ], GoogleRecaptchaValidator);
 exports.GoogleRecaptchaValidator = GoogleRecaptchaValidator;
