@@ -48,7 +48,8 @@ let GoogleRecaptchaValidator = class GoogleRecaptchaValidator {
     }
     verifyResponse(response, headers = {}) {
         let secret = this.options.secretKey;
-        recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP;
+        console.log(recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP);
+        console.log(headers);
         if (recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP && headers['x-recaptcha-sitekey']) {
             let val = recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP[headers['x-recaptcha-sitekey']];
             if (val) {
