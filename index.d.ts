@@ -1,4 +1,4 @@
-export { Recaptcha } from './decorators/recaptcha';
+export { Recaptcha, GOOGLE_RECAPTCHA_SECRET_MAP } from './decorators/recaptcha';
 export { SetRecaptchaOptions } from './decorators/set-recaptcha-options';
 export { RecaptchaResult } from './decorators/recaptcha-result';
 export { GoogleRecaptchaGuard } from './guards/google-recaptcha.guard';

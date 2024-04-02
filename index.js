@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GoogleRecaptchaNetworkException = exports.GoogleRecaptchaException = exports.GoogleRecaptchaNetwork = exports.ApplicationType = exports.ErrorCode = exports.GoogleRecaptchaModule = exports.GoogleRecaptchaGuard = exports.RecaptchaResult = exports.SetRecaptchaOptions = exports.Recaptcha = void 0;
+exports.GoogleRecaptchaNetworkException = exports.GoogleRecaptchaException = exports.GoogleRecaptchaNetwork = exports.ApplicationType = exports.ErrorCode = exports.GoogleRecaptchaModule = exports.GoogleRecaptchaGuard = exports.RecaptchaResult = exports.SetRecaptchaOptions = exports.GOOGLE_RECAPTCHA_SECRET_MAP = exports.Recaptcha = void 0;
 var recaptcha_1 = require("./decorators/recaptcha");
 Object.defineProperty(exports, "Recaptcha", { enumerable: true, get: function () { return recaptcha_1.Recaptcha; } });
+Object.defineProperty(exports, "GOOGLE_RECAPTCHA_SECRET_MAP", { enumerable: true, get: function () { return recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP; } });
 var set_recaptcha_options_1 = require("./decorators/set-recaptcha-options");
 Object.defineProperty(exports, "SetRecaptchaOptions", { enumerable: true, get: function () { return set_recaptcha_options_1.SetRecaptchaOptions; } });
 var recaptcha_result_1 = require("./decorators/recaptcha-result");
