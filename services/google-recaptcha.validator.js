@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var GoogleRecaptchaValidator_1;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GoogleRecaptchaValidator = void 0;
 const common_1 = require("@nestjs/common");
@@ -19,7 +20,7 @@ const qs = require("querystring");
 const google_recaptcha_network_1 = require("../enums/google-recaptcha-network");
 const error_code_1 = require("../enums/error-code");
 const google_recaptcha_network_exception_1 = require("../exceptions/google-recaptcha-network.exception");
-let GoogleRecaptchaValidator = class GoogleRecaptchaValidator {
+let GoogleRecaptchaValidator = GoogleRecaptchaValidator_1 = class GoogleRecaptchaValidator {
     constructor(http, options) {
         this.http = http;
         this.options = options;
@@ -47,9 +48,9 @@ let GoogleRecaptchaValidator = class GoogleRecaptchaValidator {
     }
     verifyResponse(response, headers = {}) {
         let secret = this.options.secretKey;
-        var global;
-        if (global.googleRecaptchaSecretMap && headers['x-recaptcha-sitekey']) {
-            let val = global.googleRecaptchaSecretMap[headers['x-recaptcha-sitekey']];
+        GoogleRecaptchaValidator_1.GOOGLE_RECAPTCHA_SECRET_MAP;
+        if (GoogleRecaptchaValidator_1.GOOGLE_RECAPTCHA_SECRET_MAP && headers['x-recaptcha-sitekey']) {
+            let val = GoogleRecaptchaValidator_1.GOOGLE_RECAPTCHA_SECRET_MAP[headers['x-recaptcha-sitekey']];
             if (val) {
                 secret = val;
             }
@@ -105,7 +106,8 @@ let GoogleRecaptchaValidator = class GoogleRecaptchaValidator {
             ('action' in v && typeof v['action'] === 'string');
     }
 };
-GoogleRecaptchaValidator = __decorate([
+GoogleRecaptchaValidator.GOOGLE_RECAPTCHA_SECRET_MAP = {};
+GoogleRecaptchaValidator = GoogleRecaptchaValidator_1 = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(provider_declarations_1.RECAPTCHA_HTTP_SERVICE)),
     __param(1, (0, common_1.Inject)(provider_declarations_1.RECAPTCHA_OPTIONS)),

@@ -5,6 +5,7 @@ import { VerifyResponseOptions } from '../interfaces/verify-response-decorator-o
 export declare class GoogleRecaptchaValidator {
     private readonly http;
     private readonly options;
+    static GOOGLE_RECAPTCHA_SECRET_MAP: {};
     private readonly defaultNetwork;
     private readonly headers;
     constructor(http: HttpService, options: GoogleRecaptchaValidatorOptions);
