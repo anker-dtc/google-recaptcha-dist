@@ -1,0 +1,1 @@
+{"version":3,"file":"recaptcha-verification-result.js","sourceRoot":"","sources":["../../src/models/recaptcha-verification-result.ts"],"names":[],"mappings":";;;AAEA,MAAa,2BAA2B;IAKpC,YAAY,MAAuC;QAC/C,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC,MAAM,CAAC;QAC5B,IAAI,CAAC,KAAK,GAAG,MAAM,CAAC,KAAK,CAAC;QAC1B,IAAI,CAAC,QAAQ,GAAG,MAAM,CAAC,QAAQ,CAAC;IACpC,CAAC;CACJ;AAVD,kEAUC"}
