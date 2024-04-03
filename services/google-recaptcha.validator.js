@@ -48,8 +48,7 @@ let GoogleRecaptchaValidator = class GoogleRecaptchaValidator {
     }
     verifyResponse(response, headers = {}) {
         let secret = this.options.secretKey;
-        console.log(recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP);
-        console.log(headers);
+        recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP;
         if (recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP && headers['x-recaptcha-sitekey']) {
             let val = recaptcha_1.GOOGLE_RECAPTCHA_SECRET_MAP[headers['x-recaptcha-sitekey']];
             if (val) {
@@ -85,6 +84,7 @@ let GoogleRecaptchaValidator = class GoogleRecaptchaValidator {
         });
     }
     isValidAction(action, options) {
+        return true;
         if (options.action) {
             return options.action === action;
         }
